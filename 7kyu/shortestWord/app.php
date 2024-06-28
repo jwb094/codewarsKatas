@@ -6,7 +6,7 @@ function findShort($str){
 
     
     $str= array_shift($str);
-    var_dump(strlen($str));
+    //var_dump(strlen($str));
     return strlen($str);
 }
 function arrangeByLength($a,$b){
@@ -14,4 +14,4 @@ function arrangeByLength($a,$b){
 }
 
 
-findShort("bitcoin take over the world maybe who knows perhaps");
+var_dump(findShort("bitcoin take over the world maybe who knows perhaps"));

@@ -12,6 +12,8 @@ function invite_more_women(array $a){
 //    });
 //var_dump($ladies);
 $test = count(array_filter($a, fn($var) =>$var > 0 ));
+
+
 print_r($test);
 if (count(array_filter($a, "men_count")) == count(array_filter($a, "women_count"))) {
     return false;
