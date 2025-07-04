@@ -17,7 +17,7 @@ function invert(array $a) {
 
     foreach ($a as  $value) {
         # code...
-        var_dump($value);
+       // var_dump($value);
         $b[] = $value > 0 ? $value = -$value :  $value = -$value;
     }
     print_r($b);
@@ -26,3 +26,4 @@ function invert(array $a) {
 
   invert([1, 2, 3, 4, 5]);
   invert([1, -2, 3, -4, 5]);
+  
