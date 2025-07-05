@@ -11,6 +11,7 @@ String.prototype.digit = function() {
     if (this.match(/[^0-9]/g) ) {
         return false;
     } 
+
     if(this.match(/[0-9]/g)){
         return   this.match(/[0-9]/g).length === 1 ? true : false;
     }
