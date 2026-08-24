@@ -1,12 +1,9 @@
 <?php
 
-function findDeletedNumber(array $arr, array $mixedArr) {
-  // your code
-
-  $findDeletedNumber = array_diff($arr,$mixedArr);
+function findDeletedNumber(array $arr, array $mixedArr): int {
+ $findDeletedNumber = array_diff($arr,$mixedArr);
   $findDeletedNumber= array_values($findDeletedNumber);
- // var_dump($findDeletedNumber[0]);
-  return $findDeletedNumber[0];
+return empty($findDeletedNumber) ? 0 :$findDeletedNumber[0];
 }
 
 
