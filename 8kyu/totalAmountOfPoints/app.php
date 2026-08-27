@@ -3,11 +3,9 @@ function points(array $games): int {
     $total = 0;
 
     foreach($games as $game){
-     
-        $x = current(explode(":",$game));
-        $y = array_pop(explode(":",$game));
-
-
+        $gameScore = explode(":",$game);
+        $x = (int)$gameScore[0];
+        $y =  (int)$gameScore[1];
         if ($x > $y) {
             $total += 3;
         }
