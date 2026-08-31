@@ -1,0 +1,5 @@
+<?php
+function past(int $h,int $m,int $s): int {
+  // your code here
+  return (($h * 60 *60 * 1000)+($m * 60 * 1000)+($s *1000));
+}
