@@ -28,3 +28,6 @@ def switch_it_up(number):
             return "Eight"
         case 9:
             return "Nine"
+        
+#def switch_it_up(number):
+#    return ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][number]
