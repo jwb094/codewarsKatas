@@ -14,3 +14,11 @@ function removeEveryOther(array $array): array
         return ($key === 0 || $key % 2 === 0);
     }, ARRAY_FILTER_USE_BOTH);
 }
+
+/*
+
+    return array_filter($array, function ($key) {
+        return ($key === 0 || $key % 2 === 0);
+    }, ARRAY_FILTER_USE_KEY);
+
+*/
