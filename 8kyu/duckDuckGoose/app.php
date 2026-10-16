@@ -1,13 +1,26 @@
+
+The objective of Duck, duck, goose is to walk in a circle, tapping on each player's head until one is chosen.
+
+Task:
+
+Given an array of Player objects and a position (first position is 1), return the name of the chosen Player.
+name is a property of Player objects, e.g Player.name
+
+Example:
+
+duck_duck_goose([$a, $b, $c, $d], 1); // => $a["name"]
+duck_duck_goose([$a, $b, $c, $d], 5); // => $a["name"]
+duck_duck_goose([$a, $b, $c, $d], 4); // => $d["name"]
 <?php
-function duck_duck_goose($players, $goose) {
-    // Write your code here
-   // print_r(array_key_exists($goose-1,$players));
-    //print_r($players[$goose-1]);
-    return (array_key_exists($goose-1,$players)) ? $players[$goose-1]["name"] : $players[0]["name"] ;
-  }
 
+function duck_duck_goose(array $players,int $goose) {
+  // Write your code here
+    if(array_key_exists($goose-1,$players)) return $players[$goose-1]["name"] ;
 
+    if(!array_key_exists($goose-1,$players)){
+        return ($goose % count($players) === 0 ) 
+                ?  end($players)["name"] 
+                : $players[floor($goose % count($players))-1]["name"];
 
-  print_r(duck_duck_goose([["name" => "Andre"], ["name" => "Beatrice"], ["name" => "Christina"], ["name" => "Daniel"]], 1));
-  print_r(duck_duck_goose([["name" => "Andre"], ["name" => "Beatrice"], ["name" => "Christina"], ["name" => "Daniel"]], 5));
-  print_r(duck_duck_goose([["name" => "Andre"], ["name" => "Beatrice"], ["name" => "Christina"], ["name" => "Daniel"]], 4));
+    }
+}
