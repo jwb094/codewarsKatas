@@ -19,3 +19,11 @@ function arr2bin(array $arr):string {
 
     return decbin(array_sum($value));
 }
+
+/**
+ *
+function arr2bin(array $arr):string {
+    $value = array_sum(array_filter($arr,'is_numeric'));
+    return is_nan($value) ? "NaN" : decbin($value);
+}
+ */
