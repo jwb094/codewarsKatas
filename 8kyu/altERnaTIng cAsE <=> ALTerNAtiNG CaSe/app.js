@@ -1,32 +1,20 @@
+// altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+// Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
+
+// "hello world".toAlternatingCase() === "HELLO WORLD"
+// "HELLO WORLD".toAlternatingCase() === "hello world"
+// "hello WORLD".toAlternatingCase() === "HELLO world"
+// "HeLLo WoRLD".toAlternatingCase() === "hEllO wOrld"
+// "12345".toAlternatingCase()       === "12345"                   // Non-alphabetical characters are unaffected
+// "1a2b3c4d5e".toAlternatingCase()  === "1A2B3C4D5E"
+// "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
 String.prototype.toAlternatingCase = function () {
-    // Define your method here :)
-    
-console.log(this.split(""));
-    this = this.split("");
-    for (let index = 0; index < this.length; index++) {
-   
- 
-        //this[index]=  ( this[index] === this[index].toLowerCase()) ? this[index].toUpperCase() : this[index].toLowerCase(); 
-        //console.log(this[index].toLocaleLowerCase()+);
-        //console.log(this[index] == this[index].toUpperCase());
-        this[index] = (this[index] == this[index].toUpperCase()) ? this[index] == this[index].toLowerCase() : this[index] == this[index].toUpperCase() ;
-        console.log(this[index]);
+     let toAlternatingCase ="";
+    for (let index = 0; index < this.toString().split("").length; index++){
+      toAlternatingCase += (letters[index] === letters[index].toLowerCase()) 
+                            ? letters[index].toUpperCase() 
+                            : letters[index].toLowerCase();
     }
 
-    // for (let char of this) {
-
-    //     //(condition) ? : ;
-    //     console.log(char == char.toUpperCase()+'s');
-
-    //   }
-    // for (key in this) {
-    //     console.log(this[key]);
-    //     this[key] =  ( this[key] === this[key].toUpperCase()) ? this[key] : this[key].toLower; 
-    // }
-
-    //return this.split("");
-    return this;
-  }
-
-
-  console.log("hello world".toAlternatingCase());
+      return toAlternatingCase;
+}
