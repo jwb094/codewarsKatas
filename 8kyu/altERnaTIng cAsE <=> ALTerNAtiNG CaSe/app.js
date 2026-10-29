@@ -10,7 +10,8 @@
 // "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
 String.prototype.toAlternatingCase = function () {
      let toAlternatingCase ="";
-    for (let index = 0; index < this.toString().split("").length; index++){
+    let letters = this.toString().split("");
+    for (let index = 0; index < letters.length; index++){
       toAlternatingCase += (letters[index] === letters[index].toLowerCase()) 
                             ? letters[index].toUpperCase() 
                             : letters[index].toLowerCase();
