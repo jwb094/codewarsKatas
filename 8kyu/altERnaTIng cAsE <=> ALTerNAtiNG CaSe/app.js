@@ -12,9 +12,11 @@ String.prototype.toAlternatingCase = function () {
      let toAlternatingCase ="";
     let letters = this.toString().split("");
     for (let index = 0; index < letters.length; index++){
-      toAlternatingCase += (letters[index] === letters[index].toLowerCase()) 
-                            ? letters[index].toUpperCase() 
-                            : letters[index].toLowerCase();
+        toAlternatingCase += (/[a-z]/.test(letters[index])) 
+        ? letters[index].toUpperCase() 
+          : (/[A-Z]/.test(letters[index])) 
+            ?  letters[index].toLowerCase() 
+            :  letters[index];
     }
 
       return toAlternatingCase;
